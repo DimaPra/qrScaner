@@ -1,8 +1,9 @@
-import React, {type PropsWithChildren} from 'react';
+import React, {FC, type PropsWithChildren} from 'react';
 import {View} from 'react-native';
+import { ScanerScrean } from './modules/scaner/ui/ScanerScreen';
 
-export const App = () => {
+export const App:FC = () => {
   return (
-    <View></View>
+    <ScanerScrean/>
   );
 };

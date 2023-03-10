@@ -1,7 +1,7 @@
-import React, {type PropsWithChildren} from 'react';
+import React, {FC} from 'react';
 import {View} from 'react-native';
 
-export const App = () => {
+export const App:FC = () => {
   return (
     <View></View>
   );
