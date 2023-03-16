@@ -4,15 +4,20 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    cameraContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#B8860B'
-
+    camera:{
+        height: '100%',
+    width: '100%',
+    },
+    cameraContainerStyles:{
+  
     },
     markerStyle: {
-        borderRadius: 50,
-        color: '#fff'
+        borderRadius: 70,
+        borderColor:'#fff',
+        borderWidth:3,
+        borderTopWidth:0,
+        borderBottomWidth:0,
+        
     },
     bottomContainer: {
         width: 60,

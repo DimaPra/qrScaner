@@ -8,7 +8,7 @@ export const PermissionCameraScreen: FC = () => {
         <View style={styles.container}>
             <View style={styles.containerPermission}>
                 <NoCameraAccess />
-                <Text style={styles.text}>You have not given permission to use the camera</Text>
+                <Text style={styles.text}>Have not given permission to use camera</Text>
                 <Text style={styles.text}>Allow access by clicking on the button</Text>
             </View>
             <TouchableOpacity style={styles.button} >

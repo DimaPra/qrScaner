@@ -8,6 +8,7 @@ import { useScaner } from "../../presenter/useScaner"
 import { useCameraPermission } from "../../presenter/useCameraPermission"
 import { PermissionCameraScreen } from "../../../permissionCamera/ui/PermissionCameraScreen"
 import { RESULTS } from "react-native-permissions";
+import { Header } from "../components/header"
 
 export const ScanerScrean: FC = () => {
     const { torchEnabled, toggleTorch, onSuccess } = useScaner();
@@ -18,8 +19,9 @@ export const ScanerScrean: FC = () => {
             {permissionStatus === RESULTS.DENIED ? <PermissionCameraScreen /> : null}
             {permissionStatus === RESULTS.GRANTED ? <QRCodeScanner
                 onRead={onSuccess}
-                flashMode={torchEnabled ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off} cameraStyle={styles.cameraContainer}
-                containerStyle={styles.cameraContainer}
+                flashMode={torchEnabled ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off} 
+                cameraStyle={styles.camera}
+                cameraContainerStyle={styles.cameraContainerStyles}
                 showMarker={true}
                 markerStyle={styles.markerStyle}
                 reactivate

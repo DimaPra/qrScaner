@@ -1,5 +1,5 @@
 import { NavigationProp, useNavigation, useRoute } from "@react-navigation/native"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { productModel } from "../../../entities/product/ProductModel"
 import { scanModel } from "../../../entities/scan/ScanModel"
 
@@ -36,7 +36,7 @@ export const useData = () => {
             name: scanModel.name,
             amount: scanModel.amount,
         }
-        
+
         productModel.products = [...productModel.products, item]
         console.log(productModel.products);
         scanModel.clear();
