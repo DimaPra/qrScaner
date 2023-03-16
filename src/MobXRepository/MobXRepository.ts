@@ -8,13 +8,10 @@ export class MobXRepository<T> implements IRepository<T> {
             this._data = this.initialValue as T;
         }
     }
-
     private _data: T | null = null;
-
     get data() {
         return toJS(this._data) ?? null;
     }
-
     @action save = (data: T | null): void => {
         this._data = data;
     }

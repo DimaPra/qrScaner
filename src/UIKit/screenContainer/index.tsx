@@ -14,7 +14,7 @@ interface IProps {
 }
 
 export const ScreenContainer: FC<IProps> = ({ headerComponent, edges, children, scrollEnabled = false, keyboardShouldPersistTaps = true, containerStyle, contentContainerStyle }) => {
-    const styles = useMemo(() => getStyle( ), [ ]);
+    const styles = useMemo(() => getStyle(), []);
 
     return (
         <SafeAreaView style={[styles.container, containerStyle]} edges={edges} >

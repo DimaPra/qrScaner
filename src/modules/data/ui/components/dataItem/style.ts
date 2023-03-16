@@ -1,22 +1,22 @@
 import { StyleSheet } from "react-native"
 export const styles = StyleSheet.create({
-    container:{
-        paddingHorizontal:20,
+    container: {
+        paddingHorizontal: 20,
         paddingTop: 25,
         flexDirection: 'row',
         marginHorizontal: 20,
         width: '100%'
     },
-    itemContainer:{
+    itemContainer: {
         backgroundColor: '#DAA520',
-        borderRadius:12,
+        borderRadius: 12,
         flex: 1,
         paddingHorizontal: 10,
         paddingVertical: 5,
         minHeight: 90,
     },
-    text:{
-        color:'#fff',
+    text: {
+        color: '#fff',
         fontSize: 18,
     },
     button: {
@@ -27,9 +27,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    buttonText:{
+    buttonText: {
         fontSize: 20,
     },
-    
+
 
 })

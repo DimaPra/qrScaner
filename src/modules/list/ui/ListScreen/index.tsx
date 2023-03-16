@@ -6,13 +6,13 @@ import { DataItem } from "../../../data/ui/components/dataItem";
 import { styles } from './style'
 
 export const ListScreen: FC = observer(() => {
-  return (
-    <View style={styles.container}>
-      <FlatList contentContainerStyle={{ alignItems: 'center' }}
-        data={productModel.products}
-        renderItem={({ item }) => <DataItem product={item} />}
-        keyExtractor={item => item.id}
-      />
-    </View>
-  );
-})
+    return (
+        <View style={styles.container}>
+            <FlatList contentContainerStyle={{ alignItems: 'center' }}
+                data={productModel.products}
+                renderItem={({ item }) => <DataItem product={item} />}
+                keyExtractor={item => item.id}
+            />
+        </View>
+    );
+});
