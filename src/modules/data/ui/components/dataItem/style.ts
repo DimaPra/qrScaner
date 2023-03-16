@@ -30,6 +30,4 @@ export const styles = StyleSheet.create({
     buttonText: {
         fontSize: 20,
     },
-
-
 })

@@ -14,21 +14,27 @@ class ScanModel implements IScanModel {
     get code() {
         return this.codeRepository.data || ''
     };
+
     set code(data: string) {
         this.codeRepository.save(data)
     };
+
     get name() {
         return this.nameRepository.data || ''
     };
+
     set name(data: string) {
         this.nameRepository.save(data)
     };
+
     get amount() {
         return this.amountRepository.data || ''
     };
+
     set amount(data: string) {
         this.amountRepository.save(data)
     };
+    
     clear = () => {
         this.code = '';
         this.name = '';

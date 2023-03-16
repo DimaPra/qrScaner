@@ -5,7 +5,7 @@ import { productModel } from "../../../../entities/product/ProductModel";
 import { DataItem } from "../../../data/ui/components/dataItem";
 import { styles } from './style'
 
-export const ListScreen: FC = observer(() => {
+export const ListProductScreen: FC = observer(() => {
     return (
         <View style={styles.container}>
             <FlatList contentContainerStyle={{ alignItems: 'center' }}

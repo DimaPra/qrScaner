@@ -1,4 +1,3 @@
-
 constructor(private storage: IStorage) {
     this.load();
 }

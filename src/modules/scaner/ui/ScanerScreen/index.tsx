@@ -30,8 +30,8 @@ export const ScanerScrean: FC = () => {
                         </TouchableOpacity>
                     </View>
                 }
-            /> : null};
-            {permissionStatus === RESULTS.UNAVAILABLE ? <ActivityIndicator size="large" color="#00ff00" /> : null};
+            /> : null}
+            {permissionStatus === RESULTS.UNAVAILABLE ? <ActivityIndicator size="large" color="#00ff00" /> : null}
         </View>
     );
 }

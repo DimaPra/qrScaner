@@ -5,6 +5,7 @@ import { scanModel } from "../../../entities/scan/ScanModel";
 export const useScaner = () => {
     const [torchEnabled, setTorchEnabled] = useState(false);
     const navigation = useNavigation<NavigationProp<any>>()
+    
     const toggleTorch = () => {
         setTorchEnabled((prevState) => !prevState);
     }

@@ -11,6 +11,7 @@ interface IProps {
 
 export const DataItem: FC<IProps> = ({ product }) => {
     const navigation = useNavigation<NavigationProp<any>>()
+
     const onEditItem = () => {
         scanModel.code = product.code;
         scanModel.name = product.name;
@@ -18,6 +19,7 @@ export const DataItem: FC<IProps> = ({ product }) => {
         productModel.selectedProduct = product;
         navigation.navigate('DataEdit');
     };
+
     return (
         <TouchableOpacity style={styles.container} onPress={onEditItem}>
             <View style={[styles.itemContainer]}>

@@ -18,14 +18,17 @@ export const useData = () => {
     const onChangeCode = (code: string) => {
         scanModel.code = code;
     }
+
     const onChangeName = (name: string) => {
         scanModel.name = name
         console.log(scanModel.name);
     }
+
     const onChangeAmount = (amount: string) => {
         scanModel.amount = amount
         console.log(scanModel.amount);
     }
+
     const onSaveItem = () => {
         const item = {
             id: String(new Date().getTime()),
@@ -33,11 +36,13 @@ export const useData = () => {
             name: scanModel.name,
             amount: scanModel.amount,
         }
+        
         productModel.products = [...productModel.products, item]
         console.log(productModel.products);
         scanModel.clear();
         navigation.navigate('List');
     }
+
     const onEdit = () => {
         const result = productModel.products.map((item) =>
             item.id === productModel.selectedProduct?.id ? { ...item, code: scanModel.code, name: scanModel.name, amount: scanModel.amount } : item)
@@ -45,6 +50,7 @@ export const useData = () => {
         scanModel.clear();
         navigation.navigate('List');
     }
+
     const onSave = () => {
         if (params.screenFlag === 'edit') {
             onEdit()

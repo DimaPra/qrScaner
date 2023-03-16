@@ -10,9 +10,8 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         width: '100%',
         borderRadius: 10,
-
     },
-    contsinerInput: {
+    containerInput: {
         justifyContent: 'center',
         marginHorizontal: 20,
         marginBottom: 10,
