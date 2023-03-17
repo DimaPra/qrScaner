@@ -21,16 +21,16 @@ class ProductModel implements IProductModel {
     }
 
     private load = () => {
-        this.storage.get('PRODUCTS_LIST')
+        this.storage.get('PRODUCTS')
             .then(data => { data && this.productRepository.save(data) })
-            .catch(error => console.warn('ProductsModel -> load: PRODUCTS_LIST', error));
+            .catch(error => console.warn('ProductsModel -> load: PRODUCTS', error));
     }
 
-    private persistProductsList = (data: IProduct[]) => {
+    private persistProducts = (data: IProduct[]) => {
         if (data) {
-            this.storage.set('PRODUCTS_LIST', data);
+            this.storage.set('PRODUCTS', data);
         } else {
-            this.storage.remove('PRODUCTS_LIST');
+            this.storage.remove('PRODUCTS');
         }
     }
 
@@ -40,7 +40,7 @@ class ProductModel implements IProductModel {
 
     set products(data: IProduct[]) {
         this.productRepository.save(data)
-        this.persistProductsList(data)
+        this.persistProducts(data)
     }
 
     get selectedProduct() {

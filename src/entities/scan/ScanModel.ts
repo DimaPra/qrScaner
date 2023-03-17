@@ -3,7 +3,7 @@ import { MobXRepository } from "../../MobXRepository/MobXRepository";
 export interface IScanModel {
     code: string;
     name: string;
-    amount: string
+    amount: string;
 }
 
 class ScanModel implements IScanModel {

@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     text: {
         fontSize: 17,
         fontWeight: '900',
-        color:'#000000'
+        color: '#000000'
     },
     button: {
         width: 200,
@@ -29,6 +29,5 @@ export const styles = StyleSheet.create({
     buttonText: {
         color: '#fff',
         fontSize: 25,
-        
     },
 });
