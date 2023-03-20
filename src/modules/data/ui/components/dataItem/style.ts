@@ -8,12 +8,13 @@ export const styles = StyleSheet.create({
         width: '100%'
     },
     itemContainer: {
-        backgroundColor: '#DAA520',
+        backgroundColor: '#8c8c8c',
         borderRadius: 12,
         flex: 1,
         paddingHorizontal: 10,
         paddingVertical: 5,
         minHeight: 90,
+
     },
     text: {
         color: '#fff',
@@ -30,4 +31,10 @@ export const styles = StyleSheet.create({
     buttonText: {
         fontSize: 20,
     },
+    buttonDelete: {
+        justifyContent: 'center',
+        backgroundColor: '#ff6666',
+        borderRadius: 12,
+        marginLeft: 5,
+    }
 })

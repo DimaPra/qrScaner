@@ -10,19 +10,19 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         width: '100%',
         borderRadius: 10,
-        color:'#000000',
-        fontSize:20,
+        color: '#000000',
+        fontSize: 20,
     },
     containerInput: {
         justifyContent: 'center',
         marginHorizontal: 20,
         marginBottom: 10,
-        marginTop:10
+        marginTop: 10
     },
     text: {
         fontSize: 24,
         marginBottom: 20,
-        color:'#000000'
+        color: '#000000'
     },
     button: {
         width: 345,
@@ -35,8 +35,8 @@ export const styles = StyleSheet.create({
         marginBottom: 10
     },
     textBtn: {
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: '700',
-        color: '#fff'
+        color: '#fff',
     }
 });

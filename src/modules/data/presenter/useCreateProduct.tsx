@@ -1,5 +1,5 @@
 import { NavigationProp, useNavigation, useRoute } from "@react-navigation/native"
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { productModel } from "../../../entities/product/ProductModel"
 import { scanModel } from "../../../entities/scan/ScanModel"
 
@@ -21,12 +21,10 @@ export const useData = () => {
 
     const onChangeName = (name: string) => {
         scanModel.name = name
-        console.log(scanModel.name);
     }
 
     const onChangeAmount = (amount: string) => {
         scanModel.amount = amount
-        console.log(scanModel.amount);
     }
 
     const onSaveItem = () => {
@@ -58,6 +56,7 @@ export const useData = () => {
             onSaveItem()
         };
     };
+
 
     return { onChangeCode, params, navigation, onChangeName, onChangeAmount, onSave };
 };

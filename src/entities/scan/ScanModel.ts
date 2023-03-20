@@ -34,7 +34,7 @@ class ScanModel implements IScanModel {
     set amount(data: string) {
         this.amountRepository.save(data)
     };
-    
+
     clear = () => {
         this.code = '';
         this.name = '';

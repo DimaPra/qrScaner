@@ -17,19 +17,16 @@ export const styles = StyleSheet.create({
         borderWidth: 3,
         borderTopWidth: 0,
         borderBottomWidth: 0,
-
     },
     bottomContainer: {
         width: 60,
         height: 60,
-        marginTop: 65,
         borderRadius: 50,
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 1,
-        backgroundColor: '#696969'
-    },
-    bottomContent: {
-
+        backgroundColor: '#DCDCDC',
+        marginBottom: 150,
+        borderColor: '#DCDCDC'
     },
 });

@@ -7,7 +7,7 @@ import { PermissionCameraScreen } from "../../modules/permissionCamera/ui/Permis
 const Stack = createNativeStackNavigator();
 
 export const StackNavigator: FC = () => {
-  
+
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={"TabNavigator"}>
       <Stack.Screen name="TabNavigator" component={TabNavigator} />

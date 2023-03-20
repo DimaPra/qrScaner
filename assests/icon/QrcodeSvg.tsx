@@ -11,8 +11,8 @@ export const QrcodeSvg: FC<IProps> = ({ width, height, color }) => (
     <Svg
     fill={color || '#fff'}
     viewBox="0 0 512 512"
-        width={37}
-        height={37}
+        width={35}
+        height={35}
   >
     <Path d="M51.2 51.2H102.4V102.4H51.2z" fill={color || '#fff'}/>
     <Path d="M358.4 0v25.6h-25.6v25.6h25.6v102.4H384v25.6h-25.6v25.6h51.2v-51.2h76.8v25.6H512V0H358.4zm128 128H384V25.6h102.4V128z" fill={color || '#fff'}/>

@@ -26,7 +26,7 @@ export const ScanerScrean: FC = () => {
                 reactivate
                 bottomContent={
                     <View style={styles.bottomContainer}>
-                        <TouchableOpacity onPress={toggleTorch} style={styles.bottomContent}>
+                        <TouchableOpacity onPress={toggleTorch}>
                             <FlashlightSvg />
                         </TouchableOpacity>
                     </View>
