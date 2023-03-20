@@ -15,11 +15,12 @@ export const useScaner = () => {
         setTorchEnabled((prevState) => !prevState);
     }
     const onSuccess = (e: { data: string; }) => {
-        const searchCode = productModel.products.find(products => products.code == e.data)
-        if (e.data === searchCode?.code) {
+        const searchProduct = productModel.products.find(products => products.code == e.data)
+        if (searchProduct) {
             scanModel.code = e.data
-            scanModel.name = searchCode.name
-            scanModel.amount = searchCode.amount
+            scanModel.name = searchProduct.name
+            scanModel.amount = searchProduct.amount
+            productModel.selectedProduct = searchProduct
             navigation.navigate('DataEdit');
         } else {
             scanModel.code = e.data;

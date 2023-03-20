@@ -2,9 +2,8 @@ import { productModel } from "../../../entities/product/ProductModel";
 import RNFS from 'react-native-fs';
 
 export const useProductList = () => {
-  console.log(productModel.products);
 
-  const path = RNFS.DocumentDirectoryPath + '/products.json';
+  const path = RNFS.ExternalDirectoryPath + '/products.json';
 
   const jsonMobs = JSON.stringify(productModel.products);
 
