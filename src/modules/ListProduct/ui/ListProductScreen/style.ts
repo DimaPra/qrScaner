@@ -1,9 +1,11 @@
 import { StyleSheet } from "react-native";
+import { IColors } from "../../../../UIProvider/theme/IColors";
 
-export const styles = StyleSheet.create({
+export const getStyle = (colors: IColors) => {
+    const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E0FFFF',
+        backgroundColor: colors.background,
         padding: 5
     },
     containerHeader: {
@@ -15,10 +17,12 @@ export const styles = StyleSheet.create({
 
     },
     text: {
-        color: '#000000',
+        color: colors.text,
         fontSize: 24,
         alignSelf: 'center',
         marginVertical: 5,
         marginLeft: 100,
     }
 });
+return styles
+}

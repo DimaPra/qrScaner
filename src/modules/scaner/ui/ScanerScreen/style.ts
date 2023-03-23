@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
         width: '100%',
     },
     cameraContainerStyles: {
-
     },
     markerStyle: {
         borderRadius: 70,

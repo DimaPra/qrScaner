@@ -9,15 +9,15 @@ interface IProps {
 
 export const DeleteItems: FC<IProps> = ({ width, height, color }) => (
     <Svg
-      width="30px"
-      height="30px"
+      width={width || 30}
+      height={height || 30}
       viewBox="0 0 24 24"
       fill="none"
 
     >
       <Path
         d="M10 11v6M14 11v6M4 7h16M6 7h12v11a3 3 0 01-3 3H9a3 3 0 01-3-3V7zM9 5a2 2 0 012-2h2a2 2 0 012 2v2H9V5z"
-        stroke="#000"
+        stroke={color || '#000'}
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"

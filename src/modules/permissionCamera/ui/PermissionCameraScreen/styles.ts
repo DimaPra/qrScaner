@@ -1,9 +1,11 @@
 import { StyleSheet } from "react-native";
+import { IColors } from "../../../../UIProvider/theme/IColors";
 
-export const styles = StyleSheet.create({
+export const getStyle = (colors: IColors) => {
+    const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E0FFFF',
+        backgroundColor: colors.background,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -11,23 +13,27 @@ export const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        paddingHorizontal:10,
     },
     text: {
-        fontSize: 17,
+        fontSize: 15,
         fontWeight: '900',
-        color: '#000000'
+        color:colors.text,
+        
     },
     button: {
         width: 200,
         height: 50,
-        backgroundColor: 'blue',
+        backgroundColor: colors.button,
         borderRadius: 40,
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 20,
     },
     buttonText: {
-        color: '#fff',
+        color: colors.buttonText,
         fontSize: 25,
     },
 });
+return styles;
+}
