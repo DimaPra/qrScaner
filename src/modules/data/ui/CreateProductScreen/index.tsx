@@ -17,21 +17,24 @@ export const CreateProductScreen: FC = observer(() => {
                 <TextInput
                     style={styles.item}
                     value={scanModel.code}
-                    onChangeText={onChangeCode} />
+                    onChangeText={onChangeCode}
+                />
             </View>
             <View style={styles.containerInput}>
                 <Text style={styles.text}>Product Name</Text>
                 <TextInput
                     style={styles.item}
                     value={scanModel.name}
-                    onChangeText={onChangeName} />
+                    onChangeText={onChangeName}
+                />
             </View>
             <View style={styles.containerInput}>
                 <Text style={styles.text}>Amount</Text>
                 <TextInput
                     style={styles.item}
                     value={scanModel.amount}
-                    onChangeText={onChangeAmount} />
+                    onChangeText={onChangeAmount}
+                />
             </View>
             <View style={{ flex: 1 }} />
             <TouchableOpacity style={styles.button} onPress={onSave}>

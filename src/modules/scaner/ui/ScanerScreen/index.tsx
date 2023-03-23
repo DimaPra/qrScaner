@@ -18,14 +18,15 @@ export const ScanerScrean: FC = () => {
             {permissionStatus === RESULTS.DENIED ? <PermissionCameraScreen /> : null}
             {permissionStatus === RESULTS.GRANTED ? <QRCodeScanner
                 onRead={onSuccess}
-                flashMode={torchEnabled ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off} cameraStyle={styles.cameraContainer}
-                containerStyle={styles.cameraContainer}
+                flashMode={torchEnabled ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off}
+                cameraStyle={styles.camera}
+                cameraContainerStyle={styles.cameraContainerStyles}
                 showMarker={true}
                 markerStyle={styles.markerStyle}
                 reactivate
                 bottomContent={
                     <View style={styles.bottomContainer}>
-                        <TouchableOpacity onPress={toggleTorch} style={styles.bottomContent}>
+                        <TouchableOpacity onPress={toggleTorch}>
                             <FlashlightSvg />
                         </TouchableOpacity>
                     </View>

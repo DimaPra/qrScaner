@@ -1,3 +1,4 @@
+import { IStorage, storage } from "../../libs/storage";
 import { MobXRepository } from "../../MobXRepository/MobXRepository";
 
 export interface IProduct {
@@ -15,12 +16,31 @@ class ProductModel implements IProductModel {
     private productRepository = new MobXRepository<IProduct[]>([]);
     private selectedProductRepository = new MobXRepository<IProduct | null>(null);
 
+    constructor(private storage: IStorage) {
+        this.load();
+    }
+
+    private load = () => {
+        this.storage.get('PRODUCTS')
+            .then(data => { data && this.productRepository.save(data) })
+            .catch(error => console.warn('ProductsModel -> load: PRODUCTS', error));
+    }
+
+    private persistProducts = (data: IProduct[]) => {
+        if (data) {
+            this.storage.set('PRODUCTS', data);
+        } else {
+            this.storage.remove('PRODUCTS');
+        }
+    }
+
     get products() {
         return this.productRepository.data || []
     }
 
     set products(data: IProduct[]) {
         this.productRepository.save(data)
+        this.persistProducts(data)
     }
 
     get selectedProduct() {
@@ -35,4 +55,4 @@ class ProductModel implements IProductModel {
     };
 }
 
-export const productModel = new ProductModel();
+export const productModel = new ProductModel(storage);

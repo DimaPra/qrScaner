@@ -21,12 +21,10 @@ export const useData = () => {
 
     const onChangeName = (name: string) => {
         scanModel.name = name
-        console.log(scanModel.name);
     }
 
     const onChangeAmount = (amount: string) => {
         scanModel.amount = amount
-        console.log(scanModel.amount);
     }
 
     const onSaveItem = () => {
@@ -36,7 +34,7 @@ export const useData = () => {
             name: scanModel.name,
             amount: scanModel.amount,
         }
-        
+
         productModel.products = [...productModel.products, item]
         console.log(productModel.products);
         scanModel.clear();
@@ -58,6 +56,7 @@ export const useData = () => {
             onSaveItem()
         };
     };
+
 
     return { onChangeCode, params, navigation, onChangeName, onChangeAmount, onSave };
 };

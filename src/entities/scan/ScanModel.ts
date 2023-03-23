@@ -3,7 +3,7 @@ import { MobXRepository } from "../../MobXRepository/MobXRepository";
 export interface IScanModel {
     code: string;
     name: string;
-    amount: string
+    amount: string;
 }
 
 class ScanModel implements IScanModel {
@@ -34,7 +34,7 @@ class ScanModel implements IScanModel {
     set amount(data: string) {
         this.amountRepository.save(data)
     };
-    
+
     clear = () => {
         this.code = '';
         this.name = '';
