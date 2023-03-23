@@ -6,7 +6,7 @@ export const getStyle = (colors: IColors) => {
         container: {
             flex: 1,
             backgroundColor: colors.background,
-            padding:10,
+            padding: 10,
         },
         header: {
             alignItems: 'center',
@@ -31,8 +31,7 @@ export const getStyle = (colors: IColors) => {
             fontSize: 26,
             fontWeight: '500',
             color: colors.buttonText
-
         },
     });
     return styles;
-}
+};

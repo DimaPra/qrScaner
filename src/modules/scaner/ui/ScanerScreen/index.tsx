@@ -36,4 +36,4 @@ export const ScanerScrean: FC = () => {
             {permissionStatus === RESULTS.UNAVAILABLE ? <ActivityIndicator size="large" color="#00ff00" /> : null}
         </View>
     );
-}
+};

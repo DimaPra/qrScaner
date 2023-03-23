@@ -13,5 +13,5 @@ export const useCameraPermission = () => {
     }, []);
 
     return { permissionStatus };
-}
+};
 

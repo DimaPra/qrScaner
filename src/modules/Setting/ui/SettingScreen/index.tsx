@@ -2,15 +2,15 @@ import { FC, useMemo } from "react"
 import { Text, TouchableOpacity, View } from "react-native"
 import { SettingArrow } from "../../../../../assests/icon/SettingArrow"
 import { ToggleTheme } from "../component/ToggleTheme"
-import { getStyle} from "./style"
+import { getStyle } from "./style"
 import { useSetting } from "../../presenter/useSetting"
 import { useUiContext } from "../../../../UIProvider"
 
 export const SettingScreen: FC = () => {
-    const {t} = useUiContext()
-    const {colors} = useUiContext()
+    const { t } = useUiContext();
+    const { colors } = useUiContext();
     const styles = useMemo(() => getStyle(colors), [colors]);
-    const {onSelection} = useSetting()
+    const { onSelection } = useSetting();
 
     return (
         <View style={styles.container}>
@@ -27,5 +27,5 @@ export const SettingScreen: FC = () => {
             </View>
 
         </View>
-    )
-}
+    );
+};

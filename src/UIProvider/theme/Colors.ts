@@ -6,7 +6,7 @@ export const COLORS = {
         text: '#272A32',
         border: '#979797',
         notification: ' ',
-        header:'#fff',
+        header: '#fff',
         button: '#00BFFF',
         // My colors
         icon: '#050607',
@@ -17,10 +17,9 @@ export const COLORS = {
         shadow: '#bababa',
         backdrop: '#00000080',
         inactiveText: '#515151',
-        iconTab:"#00BFFF",
-        buttonDelete:'#d0676c',
-        buttonEdit:'#1be3b2',
-
+        iconTab: "#00BFFF",
+        buttonDelete: '#d0676c',
+        buttonEdit: '#1be3b2',
 
         low: '#3EBB00',
         medium: '#FFA214',
@@ -29,15 +28,13 @@ export const COLORS = {
     dark: {
         background: '#696969',
         button: '#A9A9A9',
-        text:'#fff',
+        text: '#fff',
         buttonText: '#272A32',
         icon: '#fff',
 
         medium: '#708090',
-        iconTab:"#FFFFE0",
-        buttonDelete:'#ba989a',
-        buttonEdit:'#5ea080',
-
-
+        iconTab: "#FFFFE0",
+        buttonDelete: '#ba989a',
+        buttonEdit: '#5ea080',
     },
 };

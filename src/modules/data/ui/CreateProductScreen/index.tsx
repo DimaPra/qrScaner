@@ -10,8 +10,8 @@ import { useUiContext } from "../../../../UIProvider";
 import { getStyle } from "./style";
 
 export const CreateProductScreen: FC = observer(() => {
-    const {t} = useUiContext()
-    const {colors} = useUiContext()
+    const { t } = useUiContext();
+    const { colors } = useUiContext();
     const styles = useMemo(() => getStyle(colors), [colors]);
     const { onChangeCode, onChangeName, onChangeAmount, onSave } = useData();
     return (

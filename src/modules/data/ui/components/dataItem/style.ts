@@ -37,23 +37,23 @@ export const getStyle = (colors: IColors) => {
             fontSize: 20,
         },
         buttonEdit: {
-            flex:1,
+            flex: 1,
             height: 30,
             backgroundColor: colors.buttonEdit,
             justifyContent: 'center',
             alignItems: 'center',
             borderRadius: 20,
-            marginRight:5,
+            marginRight: 5,
         },
         buttonDelete: {
-            flex:1,
+            flex: 1,
             height: 30,
             backgroundColor: colors.buttonDelete,
             justifyContent: 'center',
             alignItems: 'center',
             borderRadius: 20,
-            marginLeft:5,
+            marginLeft: 5,
         },
     });
     return styles;
-}
+};

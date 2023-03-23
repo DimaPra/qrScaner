@@ -4,7 +4,6 @@ import { CreateProductScreen } from "../../modules/data/ui/CreateProductScreen";
 import { TabNavigator } from "../tabNavigator/tabNavigation";
 import { PermissionCameraScreen } from "../../modules/permissionCamera/ui/PermissionCameraScreen";
 import { LanguageScreen } from "../../modules/language/ui/LanguegeScreen";
-import { SettingScreen } from "../../modules/Setting/ui/SettingScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,4 +18,4 @@ export const StackNavigator: FC = () => {
       <Stack.Screen name="Language" component={LanguageScreen} initialParams={{ screenFlag: 'language' }} />
     </Stack.Navigator>
   );
-}
+};

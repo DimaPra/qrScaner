@@ -34,7 +34,6 @@ class ColorTheme implements IColorTheme {
             this.storage.set('COLOR_THEME', data);
         }
     }
-
 }
 
 const themeStore = new MobXRepository<TTheme>('light');

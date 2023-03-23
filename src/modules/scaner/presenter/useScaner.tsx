@@ -4,12 +4,12 @@ import { IProduct, productModel } from "../../../entities/product/ProductModel";
 import { scanModel } from "../../../entities/scan/ScanModel";
 
 interface IProps {
-    product: IProduct
+    product: IProduct;
 }
 
 export const useScaner = () => {
     const [torchEnabled, setTorchEnabled] = useState(false);
-    const navigation = useNavigation<NavigationProp<any>>()
+    const navigation = useNavigation<NavigationProp<any>>();
 
     const toggleTorch = () => {
         setTorchEnabled((prevState) => !prevState);
@@ -25,7 +25,7 @@ export const useScaner = () => {
         } else {
             scanModel.code = e.data;
             navigation.navigate('Data');
-        }
-    }
+        };
+    };
     return { torchEnabled, toggleTorch, onSuccess, navigation };
-}
+};

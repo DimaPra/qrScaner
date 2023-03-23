@@ -1,12 +1,12 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Switch, View } from "react-native";
 import { useUiContext } from "../../../../../UIProvider";
 import { styles } from "./style";
 
 export const ToggleTheme: FC = () => {
   const { theme, setTheme } = useUiContext();
-  
-const isEnabled = theme === 'dark';
+
+  const isEnabled = theme === 'dark';
 
   const toggleSwitch = () => {
     setTheme(theme === "light" ? 'dark' : 'light');
@@ -22,4 +22,4 @@ const isEnabled = theme === 'dark';
       />
     </View>
   );
-}
+};

@@ -6,5 +6,5 @@ export const OpenSettingsButton = () => {
         await Linking.openSettings();
     }, []);
 
-    return { handlePress }
+    return { handlePress };
 };

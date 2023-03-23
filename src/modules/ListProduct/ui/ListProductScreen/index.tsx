@@ -10,8 +10,8 @@ import { useProductList } from "../../presenter/useProductList";
 import { getStyle } from "./style";
 
 export const ProductListScreen: FC = observer(() => {
-    const {t} = useUiContext()
-    const {colors} = useUiContext()
+    const { t } = useUiContext();
+    const { colors } = useUiContext();
     const styles = useMemo(() => getStyle(colors), [colors]);
     return (
         <View style={styles.container}>
