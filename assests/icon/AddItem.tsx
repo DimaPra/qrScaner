@@ -9,8 +9,8 @@ interface IProps {
 
 export const AddItem: FC<IProps> = ({ width, height, color }) => (
     <Svg
-      width="55px"
-      height="60px"
+      width={width || 55}
+      height={height || 60}
       viewBox="0 0 24 24"
       fill="none"
     >

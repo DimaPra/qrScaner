@@ -10,4 +10,4 @@ export const getStyle = () => {
         },
     });
     return styles;
-}
+};

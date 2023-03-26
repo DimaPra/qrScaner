@@ -20,11 +20,11 @@ export const useData = () => {
     }
 
     const onChangeName = (name: string) => {
-        scanModel.name = name
+        scanModel.name = name;
     }
 
     const onChangeAmount = (amount: string) => {
-        scanModel.amount = amount
+        scanModel.amount = amount;
     }
 
     const onSaveItem = () => {

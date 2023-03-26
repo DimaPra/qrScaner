@@ -1,20 +1,27 @@
-import { FC } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { FC, useCallback, useMemo } from "react";
+import { Linking, Text, TouchableOpacity, View } from "react-native";
 import { NoCameraAccess } from "../../../../../assests/icon/noCameraccess";
-import { OpenSettingsButton } from "../../presenter/usePermission/usePermission";
-import { styles } from "./styles";
+import { useUiContext } from "../../../../UIProvider";
+import { usePermissionCamera } from "../../presenter/usePermission/usePermission";
+import { getStyle } from "./styles";
 
 export const PermissionCameraScreen: FC = () => {
-    const { handlePress } = OpenSettingsButton()
+    const { t } = useUiContext();
+    const { colors } = useUiContext();
+    const styles = useMemo(() => getStyle(colors), [colors]);
+
+    const handlePress = useCallback(async () => {
+        await Linking.openSettings();
+    }, []);
     return (
         <View style={styles.container}>
             <View style={styles.containerPermission}>
-                <NoCameraAccess />
-                <Text style={styles.text}>Have not given permission to use camera</Text>
-                <Text style={styles.text}>Allow access by clicking on the button</Text>
+                <NoCameraAccess color={colors.icon} />
+                <Text style={styles.text}>{t('have_not_permission')}</Text>
+                <Text style={styles.text}>{t('allow_access')}</Text>
             </View>
             <TouchableOpacity style={styles.button} onPress={handlePress}>
-                <Text style={styles.buttonText}>Allow access</Text>
+                <Text style={styles.buttonText}>{t('allow')}</Text>
             </TouchableOpacity>
         </View>
     );

@@ -15,24 +15,25 @@ export const ScanerScrean: FC = () => {
 
     return (
         <View style={styles.container}>
-            {permissionStatus === RESULTS.DENIED ? <PermissionCameraScreen /> : null}
-            {permissionStatus === RESULTS.GRANTED ? <QRCodeScanner
-                onRead={onSuccess}
-                flashMode={torchEnabled ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off}
-                cameraStyle={styles.camera}
-                cameraContainerStyle={styles.cameraContainerStyles}
-                showMarker={true}
-                markerStyle={styles.markerStyle}
-                reactivate
-                bottomContent={
-                    <View style={styles.bottomContainer}>
-                        <TouchableOpacity onPress={toggleTorch}>
-                            <FlashlightSvg />
-                        </TouchableOpacity>
-                    </View>
-                }
-            /> : null}
+            {permissionStatus === RESULTS.GRANTED
+                ? <QRCodeScanner
+                    onRead={onSuccess}
+                    flashMode={torchEnabled ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off}
+                    cameraStyle={styles.camera}
+                    cameraContainerStyle={styles.cameraContainerStyles}
+                    showMarker={true}
+                    markerStyle={styles.markerStyle}
+                    reactivate
+                    bottomContent={
+                        <View style={styles.bottomContainer}>
+                            <TouchableOpacity onPress={toggleTorch}>
+                                <FlashlightSvg />
+                            </TouchableOpacity>
+                        </View>
+                    }
+                />
+                : <PermissionCameraScreen />}
             {permissionStatus === RESULTS.UNAVAILABLE ? <ActivityIndicator size="large" color="#00ff00" /> : null}
         </View>
     );
-}
+};
