@@ -5,13 +5,11 @@ import { IStorage, storage } from '../../libs/storage';
 import { getLocales } from "react-native-localize";
 import { IRepository } from '../../MobXRepository/IRepository';
 import { MobXRepository } from '../../MobXRepository/MobXRepository';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 class Localization implements ILocalization {
     private i18n!: I18n
 
     constructor(private localizationStore: IRepository<string>, private storage: IStorage) {
-        const navigation = useNavigation<NavigationProp<any>>()
         this.i18n = new I18n();
         this.i18n.enableFallback = true;
         this.i18n.translations = translations;

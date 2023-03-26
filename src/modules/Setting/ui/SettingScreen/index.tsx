@@ -24,8 +24,7 @@ export const SettingScreen: FC = () => {
             <View style={styles.button}>
                 <Text style={styles.text}>{t('dark_theme')}</Text>
                 <ToggleTheme />
-            </View>
-
+            </View>        
         </View>
     );
 };

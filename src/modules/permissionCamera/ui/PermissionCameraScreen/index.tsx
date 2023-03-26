@@ -1,16 +1,18 @@
-import { FC, useMemo } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { FC, useCallback, useMemo } from "react";
+import { Linking, Text, TouchableOpacity, View } from "react-native";
 import { NoCameraAccess } from "../../../../../assests/icon/noCameraccess";
 import { useUiContext } from "../../../../UIProvider";
-import { OpenSettingsButton } from "../../presenter/usePermission/usePermission";
+import { usePermissionCamera } from "../../presenter/usePermission/usePermission";
 import { getStyle } from "./styles";
 
 export const PermissionCameraScreen: FC = () => {
     const { t } = useUiContext();
     const { colors } = useUiContext();
     const styles = useMemo(() => getStyle(colors), [colors]);
-    const { handlePress } = OpenSettingsButton();
 
+    const handlePress = useCallback(async () => {
+        await Linking.openSettings();
+    }, []);
     return (
         <View style={styles.container}>
             <View style={styles.containerPermission}>
